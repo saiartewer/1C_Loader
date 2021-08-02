@@ -1,6 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
   <items xsi:type="form:FormField">
+    <name>ФорматФайла</name>
+    <id>4</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект.ФорматФайла</segments>
+    </dataPath>
+    <extendedTooltip>
+      <name>ФорматФайлаРасширеннаяПодсказка</name>
+      <id>6</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ФорматФайлаКонтекстноеМеню</name>
+      <id>5</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>RadioButtonField</type>
+    <editMode>EnterOnInput</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
+      <radioButtonsType>Tumbler</radioButtonsType>
+      <choiceList>
+        <value xsi:type="core:StringValue">
+          <value>Все</value>
+        </value>
+      </choiceList>
+      <choiceList>
+        <value xsi:type="core:StringValue">
+          <value>TXT</value>
+        </value>
+      </choiceList>
+      <choiceList>
+        <value xsi:type="core:StringValue">
+          <value>CSV</value>
+        </value>
+      </choiceList>
+      <choiceList>
+        <value xsi:type="core:StringValue">
+          <value>XLS</value>
+        </value>
+      </choiceList>
+      <choiceList>
+        <value xsi:type="core:StringValue">
+          <value>DBF</value>
+        </value>
+      </choiceList>
+      <choiceList>
+        <value xsi:type="core:StringValue">
+          <value>XML</value>
+        </value>
+      </choiceList>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormField">
     <name>ПутьКФайлу</name>
     <id>1</id>
     <visible>true</visible>
@@ -53,76 +128,6 @@
       <chooseType>true</chooseType>
       <typeDomainEnabled>true</typeDomainEnabled>
       <textEdit>true</textEdit>
-    </extInfo>
-  </items>
-  <items xsi:type="form:FormField">
-    <name>ФорматФайла</name>
-    <id>4</id>
-    <visible>true</visible>
-    <enabled>true</enabled>
-    <userVisible>
-      <common>true</common>
-    </userVisible>
-    <dataPath xsi:type="form:DataPath">
-      <segments>Объект.ФорматФайла</segments>
-    </dataPath>
-    <extendedTooltip>
-      <name>ФорматФайлаРасширеннаяПодсказка</name>
-      <id>6</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <type>Label</type>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:LabelDecorationExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
-      </extInfo>
-    </extendedTooltip>
-    <contextMenu>
-      <name>ФорматФайлаКонтекстноеМеню</name>
-      <id>5</id>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <autoFill>true</autoFill>
-    </contextMenu>
-    <type>RadioButtonField</type>
-    <editMode>EnterOnInput</editMode>
-    <showInHeader>true</showInHeader>
-    <headerHorizontalAlign>Left</headerHorizontalAlign>
-    <showInFooter>true</showInFooter>
-    <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
-      <radioButtonsType>Tumbler</radioButtonsType>
-      <choiceList>
-        <value xsi:type="core:StringValue">
-          <value>TXT</value>
-        </value>
-      </choiceList>
-      <choiceList>
-        <value xsi:type="core:StringValue">
-          <value>CSV</value>
-        </value>
-      </choiceList>
-      <choiceList>
-        <value xsi:type="core:StringValue">
-          <value>XLS</value>
-        </value>
-      </choiceList>
-      <choiceList>
-        <value xsi:type="core:StringValue">
-          <value>DBF</value>
-        </value>
-      </choiceList>
-      <choiceList>
-        <value xsi:type="core:StringValue">
-          <value>XML</value>
-        </value>
-      </choiceList>
     </extInfo>
   </items>
   <items xsi:type="form:Table">
@@ -580,6 +585,10 @@
     <horizontalAlign>Left</horizontalAlign>
     <autoFill>true</autoFill>
   </autoCommandBar>
+  <handlers>
+    <event>OnOpen</event>
+    <name>ПриОткрытии</name>
+  </handlers>
   <autoTitle>true</autoTitle>
   <autoUrl>true</autoUrl>
   <group>Vertical</group>
