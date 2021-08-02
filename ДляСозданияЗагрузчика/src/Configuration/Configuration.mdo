@@ -39,5 +39,6 @@
     </synonym>
     <languageCode>ru</languageCode>
   </languages>
+  <documents>Document.ПриходнаяНакладная</documents>
   <dataProcessors>DataProcessor.ЗагрузкаДанных</dataProcessors>
 </mdclass:Configuration>
